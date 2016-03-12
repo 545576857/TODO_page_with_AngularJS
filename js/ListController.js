@@ -4,9 +4,9 @@ var todo_list = angular.module('TodoListApp', []);
   todo_list.controller('ListController', function($scope) {
 
   $scope.items = [
-    { detail: 'Dave Jones', stat: 'Complete'},
-    { detail: 'Jamie Riley', stat: 'Active'},
-    { detail: 'Heedy Wahlin', stat: 'Active'}
+    { detail: 'Get up', stat: 'Complete'},
+    { detail: 'Wash face', stat: 'Active'},
+    { detail: 'Eat breakfast', stat: 'Active'}
   ];
 
   $scope.addItem = function () {
@@ -25,7 +25,7 @@ var todo_list = angular.module('TodoListApp', []);
   $scope.completeItem = function (item){
     item.stat = 'Complete';
   }
-
+  
 });
 
 
@@ -51,3 +51,4 @@ function changeTab(index)
   default:;
   }
 }
+
