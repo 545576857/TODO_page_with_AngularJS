@@ -25,26 +25,43 @@
           </div>
         </div>
 
-        <div>
-          <br />
-          <ul>
-            <li>All things</li>
-              <div ng-repeat="item in items | filter:detail " ng-click="deleteItem(item)">
-                {{ item.detail }} - {{ item.stat }}
-              </div>
-          </ul>
+        <div id = "tabs_wrapper">
+          <table id = "tabs_block" >
+            <tr>
+              <th><div id = "all_item_tab" class = "tab" onclick = "changeTab(1)"> All things </div></th>
+              <th><div id = "active_item_tab" class = "tab" onclick = "changeTab(2)"> ToDo </div></th>
+              <th><div id = "complete_item_tab" class = "tab" onclick = "changeTab(3)"> Completed </div></th>
+            </tr>
+          </table>        
         </div>
 
-        <div>
-          <ul>
-            <li>TODO</li>
-              <div ng-repeat="item in items | filter:{stat:'Active'} ">
-                {{ item.detail }} - {{ item.stat }}
-                <button ng-click="completeItem(item)">Complete!</button>
+        <div id = "all_list_wrapper" class = "list_wrapper">
+          <div id = "all_list_block" class = "list_block">
+              <div class = "list_item" ng-repeat="item in items | filter:detail " ng-click="deleteItem(item)">
+                <div class = "item_col"> {{ item.detail }} </div>
+                <div class = "item_col"> {{ item.stat }} </div>
               </div>
-          </ul>
+          </div>
         </div>
 
+        <div id = "active_list_wrapper" class = "list_wrapper">
+          <div id = "active_list_block" class = "list_block">
+              <div class = "list_item" ng-repeat="item in items | filter:{stat:'Active'} | filter:detail">
+                <div class = "item_col"> {{ item.detail }} </div> 
+                <div class = "item_col"> {{ item.stat }} </div>
+                <div class = "item_col"> <button ng-click="completeItem(item)">Complete!</button> </div>
+              </div>
+          </div>
+        </div>
+
+        <div id = "complete_list_wrapper" class = "list_wrapper">
+          <div id = "complete_list_block" class = "list_block">
+              <div class = "list_item" ng-repeat="item in items | filter:{stat:'Complete'} | filter:detail">
+                <div class = "item_col"> {{ item.detail }} </div> 
+                <div class = "item_col"> {{ item.stat }} </div>
+              </div>
+          </div>
+        </div>
 
 
       </div>

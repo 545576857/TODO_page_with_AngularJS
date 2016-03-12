@@ -1,23 +1,6 @@
 
 var todo_list = angular.module('TodoListApp', []);
 
-// demoApp.config(function ($routeProvider) {
-//   $routeProvider
-//     .when('/',
-//     {
-//       controller: 'SimpleController',
-//       templateUrl: 'view1.html'
-//     })
-//     .when('/part2',
-//     {
-//       controller: 'SimpleController',
-//       templateUrl: 'view2.html'
-//     })
-//     .otherwise({ redirectTo: '/' });
-// });
-
-
-
   todo_list.controller('ListController', function($scope) {
 
   $scope.items = [
@@ -35,8 +18,8 @@ var todo_list = angular.module('TodoListApp', []);
   }
 
   $scope.deleteItem = function (item) {
-    // var index = $scope.items.indexOf(item);
-    // $scope.items.splice(index, 1);     
+    var index = $scope.items.indexOf(item);
+    $scope.items.splice(index, 1);     
   }
 
   $scope.completeItem = function (item){
@@ -44,3 +27,27 @@ var todo_list = angular.module('TodoListApp', []);
   }
 
 });
+
+
+function changeTab(index)
+{
+  switch(index)
+  {
+  case 1:
+    document.getElementById("all_list_wrapper").style.zIndex = 10;
+    document.getElementById("active_list_wrapper").style.zIndex = 0;
+    document.getElementById("complete_list_wrapper").style.zIndex = 0;
+    break;
+  case 2:
+    document.getElementById("all_list_wrapper").style.zIndex = 0;
+    document.getElementById("active_list_wrapper").style.zIndex = 10;
+    document.getElementById("complete_list_wrapper").style.zIndex = 0;
+    break;
+  case 3:
+    document.getElementById("all_list_wrapper").style.zIndex = 0;
+    document.getElementById("active_list_wrapper").style.zIndex = 0;
+    document.getElementById("complete_list_wrapper").style.zIndex = 10;
+    break;
+  default:;
+  }
+}
