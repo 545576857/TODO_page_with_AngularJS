@@ -32,7 +32,6 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 36px;
 
-
     -moz-border-top-left-radius:20px;  
     -webkit-border-top-left-radius:20px;  
     border-top-left-radius:20px;
@@ -45,7 +44,7 @@ body {
     height:50px;
     padding:10px;
     margin:10px;
-    background-color: rgb(217,215,216);
+    background-color: rgb(155,228,253);
 
     -moz-border-radius:5px;  
     -webkit-border-radius:5px;  

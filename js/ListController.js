@@ -25,7 +25,7 @@ var todo_list = angular.module('TodoListApp', []);
   $scope.completeItem = function (item){
     item.stat = 'Complete';
   }
-  
+
 });
 
 
