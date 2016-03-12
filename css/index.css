@@ -73,6 +73,10 @@ body {
     position: relative;
     height:820px;
     background-color: rgb(2,180,253);
+
+    -moz-border-radius:20px;  
+    -webkit-border-radius:20px;  
+    border-radius:20px;
 }
 
 
