@@ -1,53 +1,58 @@
-<html data-ng-app="demoApp">
+<html ng-app="TodoListApp">
   <head>
 
-    <style>
-
-    </style>
-    <title></title>
+    <link href="css/index.css" type="text/css" rel="Stylesheet" />
+    <title>Todo List</title>
   </head>
-  <body  data-ng-controller="SimpleController">
-    <div>
-      Name: <input type="text" data-ng-model="name" />
-      <br />
-      <ul>
-          <li data-ng-repeat="cust in customers | filter:name ">
-            {{ cust.name }} - {{ cust.city }}
-          </li>
-      </ul>
+  <body  ng-controller="ListController">
+
+    <div id = "page_wrapper"> 
+      <div id = "title_wrapper">
+        Todo List
+      </div>
+
+      <div id = "content_wrapper">
+
+        <div id = "tools_block">
+          <div id = "add_item_block">
+            TODO: <br/>
+            <input type="text" ng-model="newItem.detail" />
+            <button ng-click="addItem()">Add Item</button>
+          </div>
+
+          <div id = "search_item_block">
+            Item Search: <input type="text" ng-model="detail" />
+          </div>
+        </div>
+
+        <div>
+          <br />
+          <ul>
+            <li>All things</li>
+              <div ng-repeat="item in items | filter:detail " ng-click="deleteItem(item)">
+                {{ item.detail }} - {{ item.stat }}
+              </div>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <li>TODO</li>
+              <div ng-repeat="item in items | filter:{stat:'Active'} ">
+                {{ item.detail }} - {{ item.stat }}
+                <button ng-click="completeItem(item)">Complete!</button>
+              </div>
+          </ul>
+        </div>
+
+
+
+      </div>
     </div>
 
-    <div>
-      <ul>
-          <li data-ng-repeat="cust in customers | filter:{city:'Phoenix'} ">
-            {{ cust.name }} - {{ cust.city }}
-          </li>
-      </ul>
-    </div>
+    <script type="text/javascript" src="js/angular.min.js"></script>
 
-    <br />
-    Customer Name: <br/>
-    <input type="text" data-ng-model="newCustomer.name" />
-    <br/>
-    Customer City: <br/>
-    <input type="text" data-ng-model="newCustomer.city" />
-    <br/>
-    <button data-ng-click="addCustomer()">Add Customer</button>
+    <script src="js/ListController.js"></script>
 
-
-    <script type="text/javascript" src="angular.min.js"></script>
-
-    <script src="ListController.js"></script>
-    <!--script>
-      function SimpleController($scope) {
-
-        $scope.customers = [
-          { name: 'Dave Jones', city: 'Phoenix'},
-          { name: 'Jamie Riley', city: 'Atlanta'},
-          { name: 'Heedy Wahlin', city: 'Chandler'}
-        ];
-
-      }
-    </script-->
   </body>
 </html>

@@ -1,0 +1,25 @@
+#page_wrapper {
+    margin-top:25px;
+    background-color: rgb(48,188,251);
+    width:600px;
+    display: block;
+    margin:auto;
+    min-height: 900px;
+    padding-bottom: 10px;
+
+    -moz-border-radius:20px;  
+    -webkit-border-radius:20px;  
+    border-radius:20px;
+}
+
+#title_wrapper{
+    height:80px;
+    padding:10px;
+    background-color: rgb(61,215,253);
+}
+
+#tools_block{
+    height:80px;
+    padding:10px;
+    background-color: lightgray;
+}
