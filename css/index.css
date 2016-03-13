@@ -93,17 +93,20 @@ body {
 
 #all_list_wrapper{
     background-color: rgb(155,228,253);
-    z-index:10;
+    //z-index:10;
+    display: block;
 }
 
 #active_list_wrapper{
     background-color: rgb(253,204,145);
-    z-index:0;
+   // z-index:0;
+   display: none;
 }
 
 #complete_list_wrapper{
     background-color: rgb(145,253,185);
-    z-index:0;
+    //z-index:0;
+    display: none;
 }
 
 
