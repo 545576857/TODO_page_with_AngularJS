@@ -2,6 +2,8 @@ body {
     background: url("../img/background.jpg") no-repeat;
     background-size:2400px, 3200px;
 
+    font-family: Helvetica, Arial, sans-serif;
+
     cursor: default;
     -moz-user-select:none;
     -webkit-user-select:none;
@@ -36,7 +38,6 @@ body {
     padding-left:20px;
     background-color: rgb(2,180,253);
 
-    font-family: Helvetica, Arial, sans-serif;
     font-size: 36px;
 
     -moz-border-top-left-radius:20px;  
@@ -120,6 +121,7 @@ body {
 .tab{
     height:30px;
     width:191px;
+    padding-top:5px;
 
     -moz-border-top-left-radius: 8px;  
     -webkit-border-top-left-radius: 8px;  
