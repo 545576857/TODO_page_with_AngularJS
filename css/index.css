@@ -3,10 +3,10 @@ body {
     background-size:2400px, 3200px;
 
     cursor: default;
-    -moz-user-select:none;/*火狐*/
-    -webkit-user-select:none;/*webkit浏览器*/
-    -ms-user-select:none;/*IE10*/
-    -khtml-user-select:none;/*早期浏览器*/
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    -khtml-user-select:none;
     user-select:none;
 }
 
@@ -183,10 +183,10 @@ body {
     width:370px;
     height:25px;
 
-    -moz-user-select: text;/*火狐*/
-    -webkit-user-select: text;/*webkit浏览器*/
-    -ms-user-select: text;/*IE10*/
-    -khtml-user-select: text;/*早期浏览器*/
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    -khtml-user-select: text;
     user-select: text;
 }
 
